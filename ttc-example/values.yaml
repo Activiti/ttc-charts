@@ -35,7 +35,7 @@ ttc-connectors-reward:
 ttc-query-campaign:
   image:
     repository: activiti/ttc-query-campaign
-    tag: 7.0.0.Beta3
+    tag: ProcessVariable
     pullPolicy: Always
 
 ttc-rb-english-campaign:
