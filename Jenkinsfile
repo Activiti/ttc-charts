@@ -7,7 +7,7 @@ pipeline {
     }
     environment {
       ORG               = 'activiti'
-      APP_NAME          = 'ttc-charts'
+      APP_NAME          = 'ttc-example'
       CHARTMUSEUM_CREDS = credentials('jenkins-x-chartmuseum')
       GITHUB_CHARTS_REPO    = "https://github.com/Activiti/activiti-cloud-helm-charts.git"
       GITHUB_HELM_REPO_URL = "https://activiti.github.io/activiti-cloud-helm-charts/"
@@ -35,8 +35,8 @@ pipeline {
               sh 'make install'
             }
 
-            dir("./activiti-cloud-acceptance-scenarios") {
-              git 'https://github.com/Activiti/activiti-cloud-acceptance-scenarios.git'
+            dir("./ttc-acceptance-tests") {
+              git 'https://github.com/Activiti/ttc-acceptance-tests.git'
               sh 'sleep 120'
               sh "mvn clean verify"
             }
@@ -65,8 +65,8 @@ pipeline {
               sh 'make install'
             }
 	   //run tests	
-            dir("./activiti-cloud-acceptance-scenarios") {
-              git 'https://github.com/Activiti/activiti-cloud-acceptance-scenarios.git'
+            dir("./ttc-acceptance-tests") {
+              git 'https://github.com/Activiti/ttc-acceptance-tests.git'
               sh 'sleep 120'
               sh "mvn clean verify"
             }	  
