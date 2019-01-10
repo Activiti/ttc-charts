@@ -55,7 +55,7 @@ ttc-query-campaign:
 ttc-rb-english-campaign:
   image:
     repository: activiti/ttc-rb-english-campaign
-    tag: 7.0.0.Beta4
+    tag: v1.0.5
     pullPolicy: Always
   service:
     name: ttc-rb-english-campaign
