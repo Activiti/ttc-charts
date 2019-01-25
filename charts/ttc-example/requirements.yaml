@@ -2,34 +2,34 @@ dependencies:
 - alias: ttc-campaigns-service
   name: "example-cloud-connector"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "1.0.55"
+  version: "1.0.69"
 - alias: ttc-connectors-dummytwitter
   name: "example-cloud-connector"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "1.0.55"
+  version: "1.0.69"
 - alias: ttc-connectors-processing
   name: "example-cloud-connector"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "1.0.55"
+  version: "1.0.69"
 - alias: ttc-connectors-ranking
   name: "example-cloud-connector"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "1.0.55"
+  version: "1.0.69"
 - alias: ttc-connectors-reward
   name: "example-cloud-connector"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "1.0.55"
+  version: "1.0.69"
 - alias: ttc-query-campaign
   name: "activiti-cloud-query"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "7.0.11"
+  version: "7.0.62"
 - alias: ttc-rb-english-campaign
   name: "example-runtime-bundle"
   repository: "https://activiti.github.io/activiti-cloud-helm-charts/"
-  version: "7.0.66"
+  version: "7.0.84"
 - name: infrastructure
   repository: "https://activiti.github.io/activiti-cloud-charts/"
-  version: "0.5.1"
+  version: "0.6.1"
 - alias: rabbitmq
   name: rabbitmq-ha
   repository: "https://kubernetes-charts.storage.googleapis.com"

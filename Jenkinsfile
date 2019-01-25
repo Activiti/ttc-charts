@@ -3,7 +3,7 @@ pipeline {
       disableConcurrentBuilds()
     }  
     agent {
-      label "jenkins-maven"
+      label "jenkins-maven-java11"
     }
     environment {
       ORG               = 'activiti'
@@ -37,7 +37,7 @@ pipeline {
 
             dir("./ttc-acceptance-tests") {
               git 'https://github.com/Activiti/ttc-acceptance-tests.git'
-              sh 'sleep 120'
+              sh 'sleep 180'
               sh "mvn clean verify"
             }
           }
