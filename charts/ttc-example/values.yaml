@@ -13,7 +13,7 @@ ttc-campaigns-service:
 ttc-connectors-dummytwitter:
   image:
     repository: activiti/ttc-connectors-dummytwitter
-    tag: 1.0.57
+    tag: 1.0.59
     pullPolicy: Always
   service:
     name: ttc-connectors-dummytwitter
