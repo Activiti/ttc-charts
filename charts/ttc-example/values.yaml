@@ -59,6 +59,10 @@ ttc-rb-english-campaign:
     pullPolicy: Always
   service:
     name: ttc-rb-english-campaign
+    labels:
+      type: campaign
+      campaign.name: activiti
+      campaign.lang: en
   extraEnv: |
     - name: CAMPAIGN_TOPIC
       value: "activiti"
