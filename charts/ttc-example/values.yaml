@@ -45,12 +45,22 @@ ttc-connectors-reward:
     name: ttc-connectors-reward
 
 ttc-query-campaign:
+  db:
+    deployPostgres: true
+    name: querypostgresql
+    password: query
   image:
     repository: activiti/ttc-query-campaign
     tag: 1.0.43
     pullPolicy: Always
   service:
     name: ttc-query-campaign
+
+db:
+  deployPostgres: true
+
+activiti-cloud-notifications:
+  enabled: true
 
 ttc-rb-english-campaign:
   image:
@@ -70,6 +80,8 @@ ttc-rb-english-campaign:
 global:
   keycloak:
     url: "http://activiti-keycloak.jx-staging.35.197.207.143.nip.io/auth"
+  gateway:
+    host: &gatewayhost "activiti-cloud-gateway.jx-staging.35.197.207.143.nip.io"
 
 infrastructure:
   activiti-keycloak:
@@ -100,7 +112,7 @@ infrastructure:
   activiti-cloud-gateway:
     ingress:
       enabled: true
-      hostName: "activiti-cloud-gateway.jx-staging.35.197.207.143.nip.io"
+      hostName: *gatewayhost
       annotations:
         kubernetes.io/ingress.class: nginx
         nginx.ingress.kubernetes.io/rewrite-target: /
