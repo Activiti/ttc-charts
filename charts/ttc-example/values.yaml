@@ -5,7 +5,7 @@
 ttc-campaigns-service:
   image:
     repository: activiti/ttc-campaigns-service
-    tag: 1.0.43
+    tag: 1.0.44
     pullPolicy: Always
   service:
     name: ttc-campaigns
@@ -13,7 +13,7 @@ ttc-campaigns-service:
 ttc-connectors-dummytwitter:
   image:
     repository: activiti/ttc-connectors-dummytwitter
-    tag: 1.0.77
+    tag: 1.0.78
     pullPolicy: Always
   service:
     name: ttc-connectors-dummytwitter
@@ -23,7 +23,7 @@ ttc-connectors-dummytwitter:
 ttc-connectors-processing:
   image:
     repository: activiti/ttc-connectors-processing
-    tag: 1.0.52
+    tag: 1.0.53
     pullPolicy: Always
   service:
     name: ttc-connectors-processing
@@ -39,23 +39,27 @@ ttc-connectors-ranking:
 ttc-connectors-reward:
   image:
     repository: activiti/ttc-connectors-reward
-    tag: 1.0.52
+    tag: 1.0.53
     pullPolicy: Always
   service:
     name: ttc-connectors-reward
 
 ttc-query-campaign:
+  postgres:
+    enable: false
   image:
     repository: activiti/ttc-query-campaign
-    tag: 1.0.55
+    tag: 1.0.56
     pullPolicy: Always
   service:
     name: ttc-query-campaign
 
 ttc-rb-english-campaign:
+  postgres:
+    enable: false
   image:
     repository: activiti/ttc-rb-english-campaign
-    tag: 1.0.44
+    tag: 1.0.45
     pullPolicy: Always
   service:
     name: ttc-rb-english-campaign
@@ -108,32 +112,24 @@ infrastructure:
         nginx.ingress.kubernetes.io/cors-allow-headers: "*"
         nginx.ingress.kubernetes.io/x-forwarded-prefix: true
 
-rabbitmq:
-  enabled: true
-  service:
-    clusterIP: None
-  rabbitmqUsername: "guest"
-  rabbitmqPassword: "guest"
-  rabbitmqErlangCookie: 124567890abcdefghijklmnopqrstuv
-  rabbitmqSTOMPPlugin:
-    enabled: true
-  resources:
-   limits:
-    cpu: 200m
-    memory: 1Gi
-   requests:
-    cpu: 100m
-    memory: 1Gi
-  rbac:
-    create: true
-  replicaCount: 1
-  ingress:
+#use app chart to get rabbit but everything else we add separately so disable from application chart
+application:
+  #not disabling rabbit
+
+  postgres:
     enabled: false
-#    hostName: "jx-staging-quickstart-http.jx-staging.35.197.207.143.nip.io"
-    path: /rabbitmq
-    annotations:
-      kubernetes.io/ingress.class: nginx
-      nginx.ingress.kubernetes.io/rewrite-target: /
-      nginx.ingress.kubernetes.io/enable-cors: "true"
-      nginx.ingress.kubernetes.io/cors-allow-headers: "X-Forwarded-For, X-Forwarded-Proto, X-Forwarded-Port, X-Forwarded-Prefix"
-      nginx.ingress.kubernetes.io/x-forwarded-prefix: "true"
+
+  activiti-cloud-query:
+    enabled: false
+
+  activiti-cloud-audit:
+    enabled: false
+
+  runtime-bundle:
+    enabled: false
+
+  activiti-cloud-connector:
+    enabled: false
+
+  activiti-cloud-notifications-graphql:
+    enabled: false
