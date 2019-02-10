@@ -39,7 +39,7 @@ ttc-connectors-ranking:
 ttc-connectors-reward:
   image:
     repository: activiti/ttc-connectors-reward
-    tag: 1.0.53
+    tag: 1.0.54
     pullPolicy: Always
   service:
     name: ttc-connectors-reward
