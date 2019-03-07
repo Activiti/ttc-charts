@@ -67,7 +67,7 @@ pipeline {
 	   //run tests	
             dir("./ttc-acceptance-tests") {
               git 'https://github.com/Activiti/ttc-acceptance-tests.git'
-              sh 'sleep 120'
+              sh 'sleep 200'
               sh "mvn clean verify"
             }	  
 	    //end run tests
