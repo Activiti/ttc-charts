@@ -37,7 +37,7 @@ pipeline {
 
             dir("./ttc-acceptance-tests") {
               git 'https://github.com/Activiti/ttc-acceptance-tests.git'
-              sh 'sleep 200'
+              sh 'sleep 190'
               sh "mvn clean verify"
             }
           }
@@ -67,7 +67,7 @@ pipeline {
 	   //run tests	
             dir("./ttc-acceptance-tests") {
               git 'https://github.com/Activiti/ttc-acceptance-tests.git'
-              sh 'sleep 200'
+              sh 'sleep 185'
               sh "mvn clean verify"
             }	  
 	    //end run tests
