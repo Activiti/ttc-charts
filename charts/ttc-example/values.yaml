@@ -49,7 +49,7 @@ ttc-query-campaign:
     enable: false
   image:
     repository: activiti/ttc-query-campaign
-    tag: 7.1.56
+    tag: 7.1.57
     pullPolicy: Always
   service:
     name: ttc-query-campaign
