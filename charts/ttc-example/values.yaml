@@ -59,7 +59,7 @@ ttc-rb-english-campaign:
     enable: false
   image:
     repository: activiti/ttc-rb-english-campaign
-    tag: 7.1.109
+    tag: 7.1.110
     pullPolicy: Always
   service:
     name: ttc-rb-english-campaign
