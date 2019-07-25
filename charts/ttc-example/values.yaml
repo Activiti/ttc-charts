@@ -5,7 +5,7 @@
 ttc-campaigns-service:
   image:
     repository: activiti/ttc-campaigns-service
-    tag: 7.1.116
+    tag: 7.1.117
     pullPolicy: Always
   service:
     name: ttc-campaigns
