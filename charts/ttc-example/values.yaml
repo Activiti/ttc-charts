@@ -23,7 +23,7 @@ ttc-connectors-dummytwitter:
 ttc-connectors-processing:
   image:
     repository: activiti/ttc-connectors-processing
-    tag: 7.1.133
+    tag: 7.1.134
     pullPolicy: Always
   service:
     name: ttc-connectors-processing
