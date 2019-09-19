@@ -5,7 +5,7 @@
 ttc-campaigns-service:
   image:
     repository: activiti/ttc-campaigns-service
-    tag: 7.1.167
+    tag: 7.1.168
     pullPolicy: Always
   service:
     name: ttc-campaigns
@@ -13,7 +13,7 @@ ttc-campaigns-service:
 ttc-connectors-dummytwitter:
   image:
     repository: activiti/ttc-connectors-dummytwitter
-    tag: 7.1.160
+    tag: 7.1.162
     pullPolicy: Always
   service:
     name: ttc-connectors-dummytwitter
@@ -31,7 +31,7 @@ ttc-connectors-processing:
 ttc-connectors-ranking:
   image:
     repository: activiti/ttc-connectors-ranking
-    tag: 7.1.156
+    tag: 7.1.157
     pullPolicy: Always
   service:
     name: ttc-connectors-ranking
@@ -39,7 +39,7 @@ ttc-connectors-ranking:
 ttc-connectors-reward:
   image:
     repository: activiti/ttc-connectors-reward
-    tag: 7.1.160
+    tag: 7.1.161
     pullPolicy: Always
   service:
     name: ttc-connectors-reward
@@ -49,7 +49,7 @@ ttc-query-campaign:
     enable: false
   image:
     repository: activiti/ttc-query-campaign
-    tag: 7.1.158
+    tag: 7.1.159
     pullPolicy: Always
   service:
     name: ttc-query-campaign
@@ -59,7 +59,7 @@ ttc-rb-english-campaign:
     enable: false
   image:
     repository: activiti/ttc-rb-english-campaign
-    tag: 7.1.158
+    tag: 7.1.160
     pullPolicy: Always
   service:
     name: ttc-rb-english-campaign
