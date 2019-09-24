@@ -31,7 +31,7 @@ ttc-connectors-processing:
 ttc-connectors-ranking:
   image:
     repository: activiti/ttc-connectors-ranking
-    tag: 7.1.161
+    tag: 7.1.163
     pullPolicy: Always
   service:
     name: ttc-connectors-ranking
